@@ -1,6 +1,6 @@
 {
   "name": "zodiac-sign-calculator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Determines the Western astrological sign for a given birth date by comparing against tropical zodiac boundary dates.",
   "type": "module",
   "main": "src/index.js",
