@@ -31,3 +31,10 @@ The problem is small but surprisingly easy to get wrong: the tropical zodiac's s
 Cusp days. The convention here is that the boundary day itself belongs to the sign that *begins* on it — March 21 is Aries, not Pisces. If your source of truth assigns cusp days to the preceding sign, every boundary result will be off by one.
 
 February 29 is accepted and classified as Pisces (the Pisces boundary is February 19, well clear of leap-day concerns). February 30 is rejected with a `RangeError`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
